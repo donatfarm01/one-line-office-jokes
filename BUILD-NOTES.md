@@ -11,6 +11,14 @@ angles the brief warns against.
 The program holds the joke as one constant, checks it against the gate
 before writing (one to 199 characters, a single line, no trailing newline),
 creates the output folder when needed, and writes the file as plain text.
+The gate check lives in a small validate function that also rejects empty
+text and stray leading or trailing whitespace, and the program offers a
+self-test mode that prints the entry and its length without writing the
+file. A later revision rewrote that validation out of plain asserts into
+the validate function and expanded the opening notes to explain why the
+autocorrect turn lands as a punchline; the entry text itself was not
+touched by either change, and it was re-run and re-checked afterwards at
+89 characters, one line, no trailing newline.
 
 The repository holds the program, a readme with the three linked make.fun
 badges, and an MIT licence. The entry was run locally and the output file
